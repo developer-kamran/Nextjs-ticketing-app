@@ -24,9 +24,12 @@ export default async function Dashboard() {
 }
 const getTickets = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/Tickets', {
-      cache: 'no-store',
-    });
+    const res = await fetch(
+      'https://ticketing-app-nextjs.vercel.app/api/Tickets',
+      {
+        cache: 'no-store',
+      }
+    );
 
     if (!res.ok) {
       throw new Error('Failed to fetch tickets');
